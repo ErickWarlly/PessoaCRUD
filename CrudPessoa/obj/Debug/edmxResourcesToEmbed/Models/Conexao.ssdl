@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bdcrudModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="pessoa">
+    <Key>
+      <PropertyRef Name="idpessoa" />
+    </Key>
+    <Property Name="idpessoa" Type="int" Nullable="false" />
+    <Property Name="nome" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="cpf" Type="bigint" Nullable="false" />
+    <Property Name="renda" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="bdcrudModelStoreContainer">
+    <EntitySet Name="pessoa" EntityType="Self.pessoa" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,26 @@
+﻿
+
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2> LISTA DE PESSOAS </h2>
+
+
+    <div class="form-group">
+        <label for="exampleInputEmail1">ID: @Model.idpessoa</label>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">  NOME: @Model.nome</label>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">CPF: @Model.cpf</label>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">RENDA: @Model.renda</label>
+    </div>
+    <div class="form-group">
+        <a href="/Pessoa/Index" class="btn btn-light"> VOLTAR </a>
+    </div>
+

@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2> LISTA DE PESSOAS </h2>
+
+<form name="form1" action="/Pessoa/confirmeExcluir?id=@Model.idpessoa" method="get">
+    <div class="form-group">
+        <label for="exampleInputEmail1">ID:  @Model.idpessoa</label>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">  NOME: @Model.nome</label>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">CPF:  @Model.cpf</label>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">RENDA:  @Model.renda</label>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-light"> EXLCUIR </button>
+        <a href="/Pessoa/Excluir?id=@Model.idpessoa" class="btn btn-light"> EXCLUIR </a>
+        <a href="/Pessoa/Index" class="btn btn-light"> VOLTAR </a>
+    </div>
+
+</form>

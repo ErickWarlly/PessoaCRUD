@@ -1,0 +1,40 @@
+﻿<@model IEnumerable<CrudPessoa.Models.pessoa>
+
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2> LISTA DE PESSOAS </h2>
+
+<a href="/Pessoa/Create" class="btn btn-light"> CADASTRAR </a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">NOME</th>
+            <th scope="col">CPF</th>
+            <th scope="col">RENDA </th>
+            <td></td>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+            <tr>
+                <th scope="row">@item.idpessoa</th>
+                <td>@item.nome</td>
+                <td>@item.cpf</td>
+                <td>@item.renda</td>
+                <td>
+                    <a href="/Pessoa/Editar?id=@item.idpessoa" class="btn btn-light"> EDITAR </a>
+                    <a href="/Pessoa/Detalhe?id=@item.idpessoa" class="btn btn-light"> DETALHE </a>
+                    <a href="/Pessoa/Excluir?id=@item.idpessoa" class="btn btn-light"> EXCLUIR </a>
+
+                </td>
+            </tr>
+         }
+
+    </tbody>
+</table>

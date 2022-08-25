@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bdcrudModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="bdcrudEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="pessoa" EntityType="bdcrudModel.pessoa" />
+  </EntityContainer>
+  <ComplexType Name="ComplexType1" />
+  <EntityType Name="pessoa">
+    <Key>
+      <PropertyRef Name="idpessoa" />
+    </Key>
+    <Property Name="idpessoa" Type="Int32" Nullable="false" />
+    <Property Name="nome" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="cpf" Type="Int64" Nullable="false" />
+    <Property Name="renda" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+  </EntityType>
+</Schema>

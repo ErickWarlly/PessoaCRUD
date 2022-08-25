@@ -1,0 +1,43 @@
+﻿@Model CrudPessoa.Models.pessoa;
+
+@{
+    ViewBag.Title = "Editar";
+}
+
+<form name="form1" action="/Pessoa/Editar?id=@Model.idpessoa" method="post">
+    <div class="form-group">
+        <label for="exampleInputEmail1">Nome</label>
+        <input type="text" name="nome"
+               class="form-control"
+               id="exampleInputEmail1"
+               aria-describedby="emailHelp"
+               value="@Model.nome">
+
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">CPF</label>
+        <input type="text"
+               name="cpf"
+               class="form-control"
+               id="exampleInputEmail1"
+               aria-describedby="emailHelp"
+               value="@Model.cpf">
+
+    </div>
+    <div class="form-check">
+        <label for="exampleInputEmail1">Renda</label>
+        <input type="text"
+               name="renda"
+               class="form-control"
+               id="exampleInputEmail1"
+               aria-describedby="emailHelp"
+               value="@Model.renda">
+
+    </div>
+
+    <button type="submit" class="btn btn-light"> EDITAR </button>
+
+    <a href="/Pessoa/Editar" class="btn btn-light"> EDITAR </a>
+    <a href="/Pessoa/Index" class="btn btn-light"> VOLTAR </a>
+
+</form>
